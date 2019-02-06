@@ -17,7 +17,7 @@ df -h
 dmesg -TLnever"
 
 # printer func
-P() { printf "%b\n%s\n\n" "#### [$2]" "`$2`"; }
+P() { printf "%b\n%s\n\n" "#### [$2]" "$($2)"; }
 
 # loop over indices
 mapfile -t <<<"${CMD}" -c1 -C 'P $@'
